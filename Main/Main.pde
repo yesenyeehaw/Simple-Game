@@ -1,7 +1,7 @@
 // my first sketch using git (:
 
 void setup(){
-  size(800,800);
+  size(800,250);
 }
 
 void draw(){
