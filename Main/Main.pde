@@ -11,5 +11,5 @@ void draw(){
 
 void drawRandomCircles(){
   fill(150); 
-  ellipse(random(width), random(height), 30, 30);
+  ellipse(random(width), random(height), 20, 20);
 }
