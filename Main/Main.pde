@@ -1,21 +1,23 @@
 PImage ground;
+int xPos = 0;
+int speed = 4;
 
 void setup(){
   size(800,250);      //Size of screen
   background(255);    // Setting the background to white
-  
   ground = loadImage("ground.png");
 }
 
 void draw(){
-  drawRandomCircles();
+  movingGround();
 }
 
-void show(){
-  image(ground, 20, 20);
-}
-
-void drawRandomCircles(){
-  fill(150); 
-  ellipse(random(width), random(height), 20, 20);
+void movingGround(){
+  background(255);
+  image(ground, xPos, 150);
+  image(ground, xPos+ground.width, 150);
+  xPos-= speed;
+  if(xPos+ground.width <= 0){ 
+    xPos = 0;
+  }
 }
