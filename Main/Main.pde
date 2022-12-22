@@ -1,6 +1,6 @@
 PImage ground;
-int xPos = 0;
-int speed = 4;
+int background_xPosition = 0;
+int background_speed = 3;
 
 void setup(){
   size(800,250);      //Size of screen
@@ -14,10 +14,10 @@ void draw(){
 
 void movingGround(){
   background(255);
-  image(ground, xPos, 150);
-  image(ground, xPos+ground.width, 150);
-  xPos-= speed;
-  if(xPos+ground.width <= 0){ 
-    xPos = 0;
+  image(ground, background_xPosition, 150);
+  image(ground, background_xPosition+ground.width, 150);
+  background_xPosition-= background_speed;
+  if(background_xPosition+ground.width <= 0){ 
+    background_xPosition = 0;
   }
 }
